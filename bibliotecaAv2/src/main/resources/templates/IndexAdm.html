@@ -1,0 +1,52 @@
+<html><head>
+
+</head>
+
+<body>
+
+<div>
+<h2>Gestao de Livros</h2>
+
+</div>
+
+
+<div id="form" >
+form class="form-inline" method="POST" th:object="${Livro}" th:action="@{/livros}" style="margin: 20px">   
+				<div class="form-group"> 
+					<input type="text" class="form-control" style="margin: 10px" placeholder="Titulo" th:field="*{livro}"/> 
+					<input type="text" class="form-control" style="margin: 10px" placeholder="Autor" th:field="*{autor}"/>
+					<input type="text" class="form-control" style="margin: 10px" placeholder="Ano" th:field="*{ano}"/>
+					<input type="text" class="form-control" style="margin: 10px" placeholder="Editora" th:field="*{editora}"/>
+					  
+					<button type="submit" class="btn btn-primary" style="margin: 10px">Adicionar</button>
+				</div> 
+			</form>
+</div>
+
+
+<div>
+<table class="table"> 
+					<thead>
+						<tr>
+							<th>Nome</th> 
+							<th>Autor</th> 
+							<th>Ano</th> 
+							<th>Editora</th> 
+						</tr> 
+					</thead> 
+					<tbody> 
+						<tr th:each="Livro : ${livros}"> 
+							<td th:text="${livro.titulo}"></td>
+							<td th:text="${livro.autor}"></td>  
+							<td th:text="${livro.ano}"></td>  
+							<td th:text="${livro.editora}"></td>  
+						</tr> 
+					</tbody> 
+				</table>	
+
+
+</div>
+
+</body>
+
+</html>
