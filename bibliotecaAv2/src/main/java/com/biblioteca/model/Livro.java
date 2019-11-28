@@ -20,9 +20,8 @@ public class Livro {
 	private int ano;
 	private String editora;
 	private String autor;
-
-//	@OneToOne
-//	private status()
+//	@OneToMany
+//	private autor
 	
 	public String getTitulo() {
 		return titulo;
@@ -49,6 +48,8 @@ public class Livro {
 	public void setEditora(String editora) {
 		this.editora = editora;
 	}
+	
+	
 	public String getAutor() {
 		return autor;
 	}

@@ -15,7 +15,6 @@ public class Cliente {
 	private String nome;
 	private String email;
 	
-//	@OneToOne
 	private String endereco;
 	
 	public long getId() {
